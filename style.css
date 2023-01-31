@@ -1,0 +1,295 @@
+body {
+    width: 100%;
+    background-image: url(assets/images/tile.jpg);
+    background-size: 500px;
+    background-repeat: repeat;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 80px;
+    font-family: myFont;
+    width: 100%;
+
+}
+
+/* Form And Inputs Style */
+form {
+    display: grid;
+    grid-template-columns: 10% 1% 89%;
+
+    /* create notebook background */
+    background: repeating-linear-gradient(whitesmoke, whitesmoke 40px, blue 44px);
+    margin: auto;
+    margin-bottom: 50px;
+    width: 1100px;
+    height: 360px;
+    line-height: 44px;
+    font-size: x-large;
+}
+
+#redLine {
+    height: 100%;
+    width: 4px;
+    background-color: rgb(235, 112, 112);
+}
+
+textarea,
+input {
+    background: transparent;
+    border: none;
+}
+
+textarea {
+    width: 500px;
+    max-width: 50%;
+    height: 252px;
+    margin-top: 45px;
+    line-height: 44px;
+    resize: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+#inputsDiv {
+    position: relative;
+}
+
+#dateBox {
+    width: 170px;
+    position: absolute;
+    right: 5%;
+    top: 46px;
+}
+
+label {
+    position: absolute;
+    left: 60%;
+}
+
+#dateLabel {
+    top: 45px;
+}
+
+#timeLabel {
+    top: 134px;
+}
+
+#timeBox {
+    position: absolute;
+    top: 134px;
+    right: 5%;
+}
+
+button {
+    position: absolute;
+    top: 221.5px;
+    width: 160px;
+}
+
+#addButton {
+    left: 60%;
+}
+
+#deleteAllButton {
+    right: 5%;
+
+}
+
+#clearButton {
+    left: 0px;
+    top: 309px;
+}
+
+#arrangeDate {
+    top: 309px;
+    left: 60%;
+}
+
+#arrangeOrder {
+    top: 309px;
+    right: 5%
+}
+
+
+/* Yellow Sticky Notes Style */
+#tasksSection {
+    margin: auto;
+    width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    padding-left: 90px;
+    /* help center yellow sticky notes */
+
+}
+
+#tasksSection>div {
+    margin-bottom: 20px;
+    width: 300px;
+    height: 360px;
+    animation: fadeIn 5s;
+    animation-fill-mode: none;
+    background-image: url(assets/images/yellownote.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.task {
+    width: 230px;
+    height: 215px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: x-large;
+    overflow: scroll;
+    word-wrap: break-word;
+    white-space:break-spaces;
+}
+
+.time {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+.date {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+
+}
+
+.delete {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 18px;
+    right: 42px;
+    border: none;
+    display: none;
+}
+
+div:hover>.delete {
+    display: inline-block;
+}
+
+/* Animations */
+@keyframes left {
+    from {
+        opacity: 1;
+        transform: translatex(-500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+
+@keyframes top {
+    from {
+        opacity: 1;
+        transform: translatey(-500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+@keyframes bottom {
+    from {
+        opacity: 1;
+        transform: translatey(500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+
+@keyframes right {
+    from {
+        opacity: 1;
+        transform: translatex(500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+@keyframes diagonalLeft {
+    from {
+        opacity: 1;
+        transform: translate(500px, -500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+
+
+@keyframes diagonalRight {
+    from {
+        opacity: 1;
+        transform: translate(-500px, 500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* font */
+@font-face {
+    src: url("assets/fonts/ComedyStyleDemoRegular.ttf");
+    font-family: myFont;
+}
+
+#deleteAlll {
+    right: 5%
+}
+
+#holse {
+    position: relative;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-image: url(assets/imgs/tile.jpg);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 8px;
+}

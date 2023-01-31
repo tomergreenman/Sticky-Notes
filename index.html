@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <H1>My Task Board</H1>
+
+    <section id="formSection">
+        <form>
+            <div id="emptyDiv"></div> <!-- for design purposes only -->
+            <div id="redLine"></div> <!-- for design purposes only -->
+            <div id="inputsDiv">
+                <textarea id="taskBox" placeholder="Enter Task"></textarea>
+
+                <button type="button" id="clearButton" onclick="clearForm()"
+                    class="btn btn-sm btn-dark text-danger fw-bold fs-6 border border-danger border-3 rounded-pill">Clear
+                    Form</button>
+
+                <label id="dateLabel">Enter Date:</label>
+                <input type="date" id="dateBox">
+
+                <label id="timeLabel">Enter Time:</label>
+                <input type="time" id="timeBox">
+
+                <button type="button" id="addButton" onclick="addTask()"
+                    class="btn btn-sm btn-dark text-warning fw-bold fs-6 border border-warning border-3 rounded-pill">Add
+                    Task</button>
+
+                <button id="deleteAllButton" type="button" onclick="deleteAll()"
+                    class="btn btn-sm btn-dark text-danger fw-bold fs-6 border border-danger border-3 rounded-pill">Delete
+                    All</button>
+
+
+                <button type="button" id="arrangeDate" onclick="arrangeByDate()"
+                    class="btn btn-sm btn-dark text-info fw-bold fs-6 border border-primary border-3 rounded-pill">Arange
+                    By Date</button>
+
+                <button type="button" id="arrangeOrder" onclick="arrangeByOrder()"
+                    class="btn btn-sm btn-dark text-light fw-bold fs-6 border border-success border-3 rounded-pill">Arange
+                    By Order</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="tasksSection"></section>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
